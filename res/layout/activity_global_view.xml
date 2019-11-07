@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tpt.igr203.alita.todolist.globalViewActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/all_items"
+        android:textSize="30dp"
+        android:fontFamily="Montserrat"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/right_arrow"
+        android:layout_alignEnd="@id/title"
+        android:contentDescription="@string/swipe_right_to_global_view"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/left_arrow"
+        android:layout_alignStart="@id/title"
+        android:contentDescription="@string/swipe_left_to_global_view"/>
+
+</RelativeLayout>
